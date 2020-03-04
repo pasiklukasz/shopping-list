@@ -1,1 +1,5 @@
-<p>container works!</p>
+<div class="example-list" cdkDropList (cdkDropListDropped)="drop($event)">
+	<sl-category-item class="example-box" *ngFor="let category of categories" [category]="category" cdkDrag>
+		<div cdkDragHandle>DRAG_HANDLE</div>
+	</sl-category-item>
+</div>
