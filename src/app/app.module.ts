@@ -1,12 +1,12 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { CategoryItemComponent } from './category-item/category-item.component';
-import { ContainerComponent } from './container/container.component';
-import { ListItemComponent } from './list-item/list-item.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {CategoryItemComponent} from './category-item/category-item.component';
+import {ContainerComponent} from './container/container.component';
+import {ListItemComponent} from './list-item/list-item.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import {DragDropModule} from "@angular/cdk/drag-drop";
@@ -49,6 +49,7 @@ import {MatTooltipModule} from "@angular/material/tooltip";
 import {MatTreeModule} from "@angular/material/tree";
 import {PortalModule} from "@angular/cdk/portal";
 import {ScrollingModule} from "@angular/cdk/scrolling";
+import {TransitionGroupItemDirective} from "./transition-group";
 
 const MAT_MODULES = [
     A11yModule,
@@ -97,19 +98,21 @@ const MAT_MODULES = [
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CategoryItemComponent,
-    ContainerComponent,
-    ListItemComponent
-  ],
-  imports: [
-      MAT_MODULES,
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        CategoryItemComponent,
+        ContainerComponent,
+        ListItemComponent,
+        TransitionGroupItemDirective
+    ],
+    imports: [
+        MAT_MODULES,
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

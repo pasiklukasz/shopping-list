@@ -10,6 +10,11 @@ export interface Item {
     category: CATEGORIES
 }
 
+export interface ItemSelectionEvent {
+    selected: boolean,
+    index?: number
+}
+
 //Todo change to some server js and finally to the DB data
 export const STATIC_DATA_ITEMS: Item[] = [
     {name: 'jabłka', category: CATEGORIES.Fruits},

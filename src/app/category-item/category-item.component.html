@@ -1,14 +1,14 @@
 <mat-card [style.flex]="'1'">
 	<mat-card-header>
-		<ng-content></ng-content>
 		<mat-card-title>
 			{{category.toString()}}
 			<button mat-fab color="primary" (click)="addItem()">Add</button>
 		</mat-card-title>
+		<ng-content></ng-content>
 	</mat-card-header>
 	<mat-card-content class="example-list" cdkDropList (cdkDropListDropped)="drop($event)">
-		<div class="example-box" *ngFor="let item of data" cdkDrag>
-			<sl-list-item [name]="item.name" [category]="item.category"></sl-list-item>
+		<div class="example-box" *ngFor="let item of data; let i = index" cdkDrag transition-group-item>
+			<sl-list-item (itemSelection)="handleSelectionChange($event, i)" [name]="item.name" [category]="item.category"></sl-list-item>
 		</div>
 	</mat-card-content>
 </mat-card>

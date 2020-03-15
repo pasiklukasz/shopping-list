@@ -10,8 +10,7 @@ import {CdkDragDrop, moveItemInArray} from "@angular/cdk/drag-drop";
 export class ContainerComponent implements OnInit {
 
   categories: CATEGORIES[] = [
-      CATEGORIES.Vegetables,
-      CATEGORIES.Fruits
+      CATEGORIES.Vegetables
   ];
 
   constructor() { }
